@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zeronin Portfolio</title>
+    <link rel="icon" href="img/console.png">
+    <!-- bootstrap css cdn link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <!-- custom css file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap icon cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <!-- for adding animation to website we have use AOS library 
+    AOS Library css file cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- jquery cdn link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <nav
+      id="navbar-top"
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top"
+    >
+    <div class="logo32">
+      <img src="img/logo.jpg" alt="Logo">
+    </div
+      <div class="container-fluid px-5">
+        <a class="navbar-brand fw-bold fs-2" href="#"
+          >Zeronin<i class="bi bi-emoji-dizzy"></i></a
+        >
+        <button class="btn" onclick="toggleMusic()" id="btn-playback" data-play="false">
+          <i style="color:red;"class="bi bi-music-note"></i>
+          <span id="btn-text" style="color:red;  font-family: Pacifico;">STAR😎</span>
+      </button>
+      <audio id="audio" src="audio/starboy.audio"></audio>
+        <button
+        class="nav-menu d-md-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+          <i class="bi bi-menu-button-fill"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Service</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#mindset">Mindset</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#blog">Blog</a>
+            </li>
+          </ul>
+        <!-- </div>
+        <button class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block">Contact</button>
+      </div>
+      -->
+    </nav>
+    <!-- navbar ends here -->
+
+    <!-- home section starts  -->
+    <section class="home pt-5 pb-5" id="home">
+      <!-- <img class="slider"src="image/lambo.jpg" style="width: 100vw; height: 100vh;"alt="lambo" > -->
+      <div class="row justify-content-evenly align-middle">
+        <!-- here data-aos is used for adding aos animation  -->
+        <div class="col-10 col-md-6 text-center text-md-start" data-aos="slide-right">
+          <h2 style="color: rgb(243, 59, 59)">
+            Hello bro! I Am <br/> <span class="c-orange"></span>
+          </h2>
+          <p class="text-muted1">
+            Bisa saja seseorang memiliki segalanya, yang terlihat dari luar mengagumkan. 
+            Paras rupawan, bentuk tubuh ideal, pintar, kaya, sukses dalam karier maupun rumah tangga.
+             Hal-hal itu bisa membuat seseorang dianggap sempurna.Sebaik-baiknya manusia, dia pasti memiliki 
+             kekurangan dan bisa membuat kesalahan. Itulah mengapa, tak ada manusia yang sempurna, dan mengejar 
+             kesempurnaan merupakan hal mustahil.
+          </p>
+          <div class="social-media">
+            <a href="https://www.tiktok.com/@mr_xfanny?_t=8qwQlPnsGBT&_r=1" class="tiktok"><i class="bi bi-tiktok"></i></a>
+            <a href="https://youtube.com/@azizass-01?si=O2AGZCJdqyl9NmZ8" class="youtube"><i class="bi bi-youtube"></i></a>
+            <a href="https://www.instagram.com/azizndaayzz/" class="instagram"><i class="bi bi-instagram"></i></a>
+          </div>
+          <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+            Follow me
+          </button>
+          <a href="game1/index.html" class="link ms-4 d-none">See My Work</a>
+        </div>
+        <div class="col-10 col-md-4 d-none d-md-block" >
+          <img src="img/home.jpg" class="img-fluid" alt="logo my" />
+        </div>
+      </div>
+    </section>
+    <!-- home section ends here -->
+
+    <!-- expertise section starts -->
+    <section class="expertise mt-5" id="service">
+      <div class="heading text-center">
+        <small>My Expertise</small><h3>
+          Provide Wide Range of <br />
+          Digital Services
+        </h3>
+      </div>
+      <div class="row justify-content-evenly mt-5">
+        <div class="col-10 col-md-4" data-aos="fade-up">
+          <div class="service-card">
+            <div class="img">
+              <img
+                src="img/webdesig.png"
+                class="w-25 img-fluid img"
+                alt=""
+              />
+            </div>
+            <div class="content mt-3">
+              <h4>Web Design</h4>
+              <p class="text-muted">
+              <strong>  Web designer</strong> atau perancang web adalah profesi yang dijalankan oleh orang-orang yang pekerjaannya
+                membuat desain sebuah website. Desain tersebut nantinya bisa dibuka dan dinikmati pada sebuah layar
+                monitor baik melalui komputer
+              </p>
+              <a href="https://glints.com/id/lowongan/karier-web-designer/" class="link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-10" data-aos="fade-up">
+          <div class="service-card">
+            <div class="img">
+              <img
+                src="img/debugging.png"
+                class="w-25 img-fluid img"
+                alt=""
+              />
+            </div>
+            <div class="content mt-3">
+              <h4>Web Development</h4>
+              <p class="text-muted">
+              <strong>  Web development</strong> adalah proses pembuatan, pengembangan, dan pemeliharaan situs web atau halaman yang dapat diakses secara online.
+               bertujuan untuk memastikan situs web berfungsi dengan baik, cepat, dan memberikan pengalaman yang memuaskan bagi penggunanya.
+              </p>
+              <a href="https://www.jagoanhosting.com/blog/web-development/" class="link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-10" data-aos="fade-up">
+          <div class="service-card">
+            <div class="img">
+              <img
+                src="img/console.png"
+                class="w-25 img-fluid img"
+                alt=""
+              />
+            </div>
+            <div class="content mt-3">
+              <h4>Game</h4>
+              <p class="text-muted">
+                <strong>Game</strong> Permainan yang dirancang untuk memberikan kesenangan kepada pemain saat pemain terlibat aktif dalam aktivitas permainan .
+                Meskipun permainan hiburan tidak secara khusus dirancang untuk pembelajaran yang bertujuan, pembelajaran insidental terjadi 
+                saat memainkan permainan tersebut.
+              </p>
+              <a href="https://www.sonora.id/read/423717874/game-online-hanya-untuk-sekedar-hiburan-ternyata-bisa-juga-untuk-mata-pencaharian" class="link">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- expertise section ends here -->
+
+    <!-- skill section starts -->
+    <section class="skill mt-5 py-5" id="about">
+      <div class="row justify-content-evenly">
+        <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
+          <div class="row justify-content-evenly">
+            <div class="col-10 col-md-6">
+              <div class="progress-card ms-3 ms-md-0" style="background-image: url(cardl/html.png); ">  <!--untuk background-->
+                <div class="circular-progress html-css">
+                  <span class="progress-value html-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">HTML & CSS</span>
+              </div>
+            </div>
+            <div class="col-10 col-md-6 mt-4 mt-md-0">
+              <div class="progress-card ms-3 ms-md-0" style="background: url(cardl/js.png);">
+                <div class="circular-progress javascript">
+                  <span class="progress-value javascript-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-evenly mt-4">
+            <div class="col-10 col-md-6">
+              <div class="progress-card ms-3 ms-md-0" style="background-image: url(cardl/php.png);">
+                <div class="circular-progress php">
+                  <span class="progress-value php-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">PHP</span>
+              </div>
+            </div>
+            <div class="col-10 col-md-6 mt-4 mt-md-0">
+              <div class="progress-card ms-3  ms-md-0" style="background-image: url(cardl/react.png);">
+                <div class="circular-progress reactjs">
+                  <span class="progress-value reactjs-progress">0%</span>
+                </div>
+                <br>
+                <span class="text">ReactJS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-5 skill-detail" data-aos="slide-left">
+          <div class="heading mt-5 mt-md-3">
+            <small>My Skills</small>
+            <h3>Beautiful & Unique Digital Experiences</h3>
+            <p class="text-muted">
+              Setiap bahasa pemograman mempunyai fungsi yang berbeda-beda diantara nya
+              html css php & javascript digunakan untuk membuat tampilan dan animasi web dan merupakan 
+              standart pembuatan web.
+            </p>
+            <p class="text-muted">
+              silahkan klik tombol dibawah untuk informasi lebih lanjut...
+            </p>
+            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+              <!-- here download attribute is used for adding download functionality to button  -->
+              <a
+                href="https://binus.ac.id/malang/2023/06/jenis-jenis-bahasa-pemrograman-dan-penjelasannya/"
+                download="SampleCV"
+                style="text-decoration: none;color: #fff;"
+                >Read More</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skill section end here -->
+
+    <!-- portfolio section starts here -->
+    <section class="portfolio" id="portfolio">
+      <div class="heading text-center pt-5">
+        <small>Creative Work</small>
+        <h3>Check My Portfolio</h3>
+      </div>
+
+      <div id="myBtnContainer" class="text-center mt-4">
+        <!-- here we will create custom attribute using data- for filtering -->
+        <button class="filter-item" data-filter="all">All</button>
+        <button class="filter-item" data-filter="game">Game</button>
+        <button class="filter-item" data-filter="webapp">Web App</button>
+        <button class="filter-item" data-filter="website">Website</button>
+        <button class="filter-item" data-filter="brand">Brand</button>
+      </div>
+      <div class="portfolio-body">
+        <div class="row justify-content-evenly px-4">
+          <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="cardl/2048.png" class="card-img-top" alt="2048.jpg" />
+              <div class="card-body text-center">
+                <h4 class="card-title">2048 Game</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">game</span
+                ><br />
+                <a href="https://play2048.co/" class="link">Mainkan</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-evenly mt-4 px-4">
+          <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="cardl/blovk.png" class="card-img-top" alt="..." />
+              <div class="card-body text-center">
+                <h4 class="card-title">block game</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">game</span
+                ><br />
+                <a href="game1/index.html" class="read-more-btn link">Mainkan</a>
+              </div>
+            </div>
+          </div>
+          <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="cardl/tictac.png" class="card-img-top" alt="tictac" />
+              <div class="card-body text-center">
+                <h4 class="card-title">TicTacToe Game</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">Game</span
+                ><br />
+                <a href="https://tictactoefree.com/" class="read-more-btn link">Mainkan</a>
+              </div>
+            </div>
+          </div>
+          <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="cardl/pal.png" class="card-img-top" alt="" />
+              <div class="card-body text-center">
+                <h4 class="card-title">animated scroll</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">Website</span
+                ><br />
+                <a href="animated 3d progress/index.html" class="read-more-btn link">View</a>
+              </div>
+            </div>
+          </div>
+          <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="img/parallax.png" class="card-img-top" alt="" />
+              <div class="card-body text-center">
+                <h4 class="card-title">parallax scroll</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">Website</span
+                ><br />
+                <a href="portfolio_(mls-publikin)" class="read-more-btn link">View</a>
+              </div>
+            </div>
+          </div>
+          <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+            <div class="card">
+              <img src="img/astro.png" class="card-img-top" alt="" />
+              <div class="card-body text-center">
+                <h4 class="card-title">portfolio astro</h4>
+                <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+                <span class="badge bg-secondary badge-pill">JavaScript</span>
+                <span class="badge bg-secondary badge-pill mb-2">Website</span
+                ><br />
+                <a href="masih_demo_abangkuu_beliin_domain_hehe" class="read-more-btn link">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- portfolio section ends here -->
+
+    <!-- testimonial section starts  -->
+     <section class="testimonial mt-5 pt-5" id="mindset">
+      <div class="row justify-content-evenly">
+        <div class="col-md-4 col-10" data-aos="slide-right">
+          <img src="cardl/lambo.jpg" class="img-fluid" alt="fote" style="box-shadow: lineal-gradient(red,aqua);" />
+        </div>
+        <div class="col-md-6 col-10 mt-5" data-aos="slide-left">
+          <div class="heading">
+            <small style="color: blue;">Mindset</small>
+            <h3 style="color:black;">Hard work</h3>
+            <!-- here we will use carousel element from bootstrap -->
+             <div
+              id="carouselExampleControls"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="row justify-content-evenly">
+                    <div class="col-2 text-center">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                        ketika kamu sudah membawa mobil sport orang orang 
+                        tidak akan menanyakan apa ijazah kamu
+                      </p>
+                      <h4>Sport club</h4>
+                      <small class="fs-6 text-muted">CEO of sport</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row justify-content-evenly">
+                    <div class="col-2 text-center">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                        Hidup itu seperti bersepeda jika ingin menjaga keseimbanganmu,kamu harus
+                        terus bergerak maju
+                      </p>
+                      <h4>Albert Einstein</h4>
+                      <small class="fs-6 text-muted">E=mc2</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row justify-content-evenly">
+                    <div class="col-2 text-center">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                        bermimpilah setinggi ujung langit,jika engkau jatuh, engkau
+                        akan jatuh diantara bintang bintang
+                      </p>
+                      <h4>Soekarno</h4>
+                      <small class="fs-6 text-muted">presiden RI-1</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="row justify-content-evenly">
+                    <div class="col-2 text-center">
+                      <i class="bi bi-quote"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="text-muted">
+                        "Banyak orang yang telah meninggal, tapi nama baik mereka tetap kekal. Dan 
+                         orang yang masih hidup, tapi seakan mereka orang mati yang tak berguna."
+                      </p>
+                      <h4>imam syafi'i</h4>
+                      <small class="fs-6 text-muted">tokoh islam</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="nextprev-btn rounded-pill prev-btn"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <i class="bi bi-arrow-left-circle-fill prev"></i>
+                <span class="visually-hidden" >Previous</span>
+              </button>
+              <button
+                class="nextprev-btn rounded-pill next-btn"
+                type="button"
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <i class="bi bi-arrow-right-circle-fill next"></i>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> 
+    <!-- testimonial ends here -->
+
+    
+    <!-- this work end -->
+    <!-- blog section starts -->
+    <section class="blog mt-5 pb-5" id="blog">
+      <div class="heading text-center pt-5">
+        <small style="color:blue">Latest News</small>
+        <h3 style="color:rgb(244, 7, 7);">One day</h3>
+      </div>
+      <div class="row justify-content-evenly px-4 mt-4" data-aos="fade-up">
+        <div class="blogpost col-md-4 col-10 mt-2 mt-md-0 game all">
+          <div class="card">
+            <img
+              src="image/black lamborghini huracan.jpg"
+              class="card-img-top rounded-4"
+              alt="lamborghini"
+            />
+            <div class="card-body px-4">
+              <small>By lamborgini</small
+              ><span class="ms-3">nov 13,2024</span>
+              <h4 class="card-title">
+                <a href="">black lamboghini huracan</a>
+              </h4>
+              <p class="text-muted">
+                sebuah perusahaan pembuat mobil di Italia. Perusahaan ini didirikan 
+                oleh Ferruccio Lamborghini pada tahun 1963odel pertama perusahaan Lamborghini 
+                dirilis pada pertengahan tahun 1960, kemudian dicatat untuk kenyamanan.
+              </p>
+              <a href="" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal1">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="blogpost col-md-4 col-10 mt-5 mt-md-0 website all">
+          <div class="card">
+            <img
+              src="image/bugatti chiron, 2018.jpg"
+              class="card-img-top rounded-4"
+              alt="bugatti"
+            />
+            <div class="card-body px-4">
+              <small>By Bugatti</small
+              ><span class="ms-3">Mar 8,2018</span>
+              <h4 class="card-title">
+                <a href="">Bugatti chiron 2018</a>
+              </h4>
+              <p class="text-muted">
+                mobil Prancis produsen dari mobil kinerja tinggi, yang didirikan pada tahun 1909. 
+                Mobil Bugatti yang dikenal karena keindahan desain mereka  (Ettore Bugatti adalah dari 
+                keluarga seniman dan menganggap dirinya untuk menjadi seorang seniman).
+              </p>
+              <a href="" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal2">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="blogpost col-md-4 col-10 mt-5 mt-md-0 webapp all">
+          <div class="card">
+            <img
+              src="image/supramk.jpg"
+              class="card-img-top rounded-4"
+              alt="toyota supra"
+            />
+            <div class="card-body px-4">
+              <small>By supra toyota</small
+              ><span class="ms-3">Mar 8,2022</span>
+              <h4 class="card-title">
+                <a href="">toyota supra mk4</a>
+              </h4>
+              <p class="text-muted">
+                Toyota Supra MK4 dapat dimodifikasi menggunakan mesin 2JZ miliknya dan disetel hingga lebih dari 700 hp . 
+                Berkat popularitas mobil ini, mobil ini telah menerima banyak dukungan purnajual dari merek-merek besar seperti Greddy, HKS, dan Tomei
+              </p>
+              <a href="#" class="read-more-btn link" data-bs-toggle="modal" data-bs-target="#exampleModal3">read more</a>
+            </div>
+          </div>
+        </div>
+        <!-- here we will make modals if Read more link is clicked the modal will popup -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              
+                <button type="button" class="btn-c rounded-pill" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i></button>
+              
+              <div class="modal-body px-4">
+                <div class="img">
+            <img style="box-shadow: black;" src="image/black lamborghini huracan.jpg" class="img-fluid" alt="lamborghini black"> 
+          
+                </div>                  
+                <div class="content mt-3">
+                  <small>By zeronin</small
+                    ><span class="text-muted ms-2">Mar 8,2024</span>
+                  <h4 class="card-title mt-3">black lamborghini huracan</h4>
+                  <div class="social-links mt-4">
+                      <button href="https://id.wikipedia.org/wiki/Lamborghini" class="rounded-pill dribble">
+                        <i class="bi bi-wikipedia"></i>
+                      </button>
+                  </div>
+                  <p class="text-muted mt-3" style="color:black;"><strong style="font-size: 16px;">HURACAN</strong>Temukan semua model baru dari rangkaian mobil eksklusif ini, yang diciptakan untuk membentuk emosi terdalam
+                     Anda. Menggabungkan ekspresi tertinggi dari kekuatan Lamborghini dengan kehalusan eksklusif kerajinan tangan Italia, seri ini mewujudkan desain otentik dan 
+                     teknologi mekanis tercanggih. Lamborghini Huracán adalah perpaduan sempurna antara teknologi dan desain. Dengan garis-garisnya yang tajam dan ramping, dirancang 
+                     untuk menembus udara dan menjinakkan jalan, Anda akan merasakan sensasi hanya dengan melihatnya. Satu-satunya hal yang lebih baik daripada menikmati keindahan ini
+                      dari kejauhan adalah dengan menyentuhnya. Keahlian Italia terbaik dicurahkan pada hasil akhir dengan prestise dan kualitas yang belum pernah ada sebelumnya.
+                     ,<br><br><strong> Desain Huracán</strong> yang sensual dan terpahat didasarkan pada bentuk heksagonal runcing dari atom karbon, sementara profil atap yang mulus merupakan
+                      ciri khas DNA Lamborghini. Huracán tetap unik bahkan dalam kegelapan, berkat cahaya "teknologi" yang memikat dari sistem pencahayaan LED penuhnya. Pilih Lamborghini 
+                      Huracán favorit Anda dan temukan spesifikasi teknisnya.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              
+                <button type="button" class="btn-c rounded-pill" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i></button>
+              
+              <div class="modal-body px-4">
+                <div class="img">
+                  <img src="image/bugatti chiron, 2018.jpg" class="img-fluid" alt="Bugatti">
+                </div>
+                <div class="content mt-3">
+                  <small>By </small
+                    ><span class="text-muted ms-2 ms-md-0">July 18,2024</span>
+                  <h4 class="card-title mt-3">Bugatti chiron 2018</h4>
+                  <div class="social-links mt-4">
+                      <button href="https://id.wikipedia.org/wiki/Bugatti" class="rounded-pill dribble">
+                        <i class="bi bi-wikipedia"></i>
+                      </button>
+                  </div>
+                  <strong class="text-muted mt-3"><strong style="font-size: 16px;"> Ettore Bugatti</strong> Saat pertama kali diluncurkan, Bugatti Chiron
+                     merupakan mobil hypercar yang bersejarah. Tradisi ini berlanjut dengan spesifikasi Bugatti Chiron 2018 yang lebih mengesankan dari pendahulunya.
+                      Terlebih lagi, mobil bertenaga ini sangat nyaman dikendarai, dengan kemudi yang lancar, pengendalian yang mulus, dan tenaga yang sangat besar di
+                       balik kapnya. Dengan kecepatan puncak 261 mph, Chiron melaju dari 0-60 dalam 2,5 detik berkat mesin 8 liter, 16 silinder yang menghasilkan 1.479
+                        tenaga kuda. Bahkan dengan kecepatan dan tenaga yang luar biasa, Chiron menawarkan pengalaman berkendara yang mulus dan menarik. 
+                       <br><strong>Desain</strong> dengan gaya klasik Bugatti , eksteriornya menonjolkan bentuk khas dan garis-garis ramping. Bentuk hypercar yang membulat
+                         dan profilnya yang seperti peluru memancarkan kecepatan dan kemudahan. Interior kendaraan ini merupakan campuran pendekatan gaya modern dengan sentuhan 
+                         arsitektur bersejarah. Warna interior saling melengkapi dan menonjolkan fitur-fitur utama seperti konsol tengah, yang berbentuk seperti penopang terbang yang membentuk
+                         arsitektur era Gotik. Dalam hal teknologi, Chiron mencerminkan desain minimalis dengan dua layar beresolusi tinggi, yang diseimbangkan dengan speedometer analog.</p>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              
+                <button type="button" class="btn-c rounded-pill" data-bs-dismiss="modal"><i class="bi bi-x-circle-fill"></i></button>
+              
+              <div class="modal-body px-4">
+                <div class="img">
+                  <img src="image/toyota supra mk4.jpg" class="img-fluid" alt="Toyota supra">
+                </div>
+                <div class="content mt-3">
+                  <small>By zeronin</small
+                    ><span class="text-muted ms-2 ms-md-0">nov 24,2024</span>
+                  <h4 class="card-title mt-3" style="color:red;">Toyota supra mk4</h4>
+                  <div class="social-links mt-4">
+                      <button href="https://id.wikipedia.org/wiki/Toyota_Supra" class="rounded-pill dribble">
+                        <i class="bi bi-wikipedia"></i>
+                      </button>
+                  </div>
+                  <p class="text-muted mt-3" ><strong style="color:rgb(14,1,1);"> Supra MK4</strong> adalah mobil sport yang legendaris dan terkenal di dunia otomotif.
+                     Mobil sport ini dikembangkan untuk memberikan kesenangan dalam pengalaman berkendara serta menghadirkan kembali 
+                     ciri motorsport pada brand Toyota.<br> Tak hanya mumpuni di lintasan pacu, mobil dengan tampilan coupe ini menjanjikan performa kelincahan
+                      dan kenyamanan saat berada di jalan raya. Di tengah pencapaiannya, ada hal buruk yang menghentikan langkah Toyota Supra, yakni tidak bisa
+                       bersaing dalam aspek harga untuk mencapai target emisi gas buang yang ditentukan oleh banyak negara. Alhasil, mobil legendaris ini sempat
+                        berhenti diproduksi pada 2002 sehingga banyak penggemarnya kecewa<br>Keunggulan Toyota Supra MK4
+                        Sebagai mobil ikonik yang legendaris, tentunya Toyota Supra MK4 memiliki banyak keunggulan. Terlebih, sebagai mobil sport, mobil ini memiliki spesifikasi yang di atas rata-rata. 
+                        
+                       <strong style="color:rgb(14, 1, 1);"><br><br> Performa Mesin yang Mengagumkan</strong>
+                        Sebagai salah satu mobil yang legendaris, <strong>Toyota Supra</strong> sudah terkenal memiliki performa yang mumpuni di kelasnya. Sejak awal kemunculannya, Toyota Supra MK4 dibekali dengan dua pilihan mesin, yaitu mesin non-turbo dan twin-turbo.
+                        Mesin non-turbo berkode 2JZGE memiliki kapasitas 3.000 cc DOHC 24 Valve 6 silinder segaris. Mesin tersebut memiliki output 225 hp dengan torsi 29
+                        Sementara untuk mesin twin turbo memiliki kode 2JZGTE. Mesin berkapasitas 3.000 cc EFI DOHC 6 silinder 24 valve ini mampu menghasilkan tenaga sebesar 280 hp dengan torsi 460 Nm. Mesin twin-turbo milik Supra menggunakan sistem sekuensial yang mampu mengurangi gejala turbo lag. Dengan mesin twin-turbo, Toyota Supra mampu melaju 0-100 km/jam dalam waktu 5,7 detik.<br>
+                        Dengan tenaga dan kapasitas mesin yang besar, tentu Toyota Supra MK4 memiliki konsumsi bahan bakar yang berlebih dibanding mobil-mobil pada umumnya. Toyota Supra MK4 ini dapat menempuh 7,6 KM/L di dalam kota, 11,1 KM/L di luar kota, dan 9 KM/L rute gabungan.
+                        Desain Eksterior yang Ikonik
+                        Toyota Supra MK4 memiliki desain yang sangat unik dan ikonik. Bahkan, Toyota Supra generasi ini dinilai memiliki desain yang paling sempurna karena hampir semua orang bisa menerima desainnya.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- blog section ends here -->
+
+    <!-- contact section starts -->
+    <section class="contact py-5" id="contact">
+      <div class="heading text-center">
+        <small>Get in Touch</small>
+        <h3>Ada pertanyaan? jangan ragu untuk menghubungi</h3>
+      </div>
+      <div class="row justify-content-evenly mt-5">
+        <div class="col-md-5 col-10 contact-details" data-aos="slide-right">
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>boaj2 , nitt45, neth</p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>rahasia</p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-send-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>aziznation123@gmail.com</p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-globe-americas"></i>
+            </div>
+            <div class="col-11">
+              <p>versi demo</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
+          <div class="contact-form">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Name"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="E-mail"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Mobile No."
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                placeholder="Message"
+                rows="5"
+              ></textarea>
+            </div>
+            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill" href="#">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact section ends here -->
+      <!-- now we will make back to top button when user click on it it will be redirected to top page  -->
+    <button
+      type="button"
+      class="btn btn-floating btn-lg rounded-pill"
+      id="btn-back-to-top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    <!-- </div> -->
+
+    <!-- footer section starts  -->
+    <footer class="text-center text-muted py-4">
+      <h3 class="text-white pt-4" data-aos="fade-up">Portfolio<i class="bi bi-currency-exchange"></i></h3>
+      <div class="link-group mt-5" data-aos="fade-up">
+        <a href="#home">Home</a>
+        <div class="vr"></div>
+        <a href="#about">About</a>
+        <div class="vr"></div>
+        <a href="#service">Service</a>
+        <div class="vr"></div>
+        <a href="#portfolio">Portfolio</a>
+        <div class="vr"></div>
+        <a href="#blog">Blog</a>
+        <div class="vr"></div>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="social-links mt-5" data-aos="fade-up">
+        <button href="" class="rounded-pill dribble">
+          <i class="bi bi-instagram"></i>
+        </button>
+        <button href="" class="rounded-pill youtube">
+          <i class="bi bi-youtube"></i>
+        </button>
+        <button href="https://open.spotify.com/playlist/0GBQfsRNnQlIpGINFDeYga?si=gbQymPK6T5Wy9mwwGTN4IA " class="rounded-pill spotify">
+          <i class="bi bi-spotify"></i>
+        </button>
+      </div>
+      <hr class="text-muted my-4" />
+
+      <p>Copyright 2024 aziz | All Rights Reserved.</p>
+    </footer>
+    <!-- footer section ends here -->
+
+      <!-- bootstrap javascript cdn link  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS library javascript link  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      // initializing AOS library
+      AOS.init({
+        duration: 1000,
+        offset: 50,
+      });
+    </script>
+
+    <script>
+      var typingEffect = new Typed(".c-orange", {
+          strings: ["Fullstack.", "developer.", "gymbro.", "Gamer."],
+          loop: true,
+          typeSpeed: 100,
+          backSpeed: 80,
+          backDelay: 1400,
+      })
+  </script>
+    <!-- custom js file linking -->
+    <script src="script.js"></script>
+  <script src="music.js"></script>
+    
+  </body>
+</html>

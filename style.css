@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=Eater&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Pacifico&display=swap');
+/* appling google font over the website  */
+body{
+    font-weight: 400;
+}
+/* body.toggle{ <error
+    background-color:#545a56;
+} */
+/* styling menu icon */
+.nav-menu{
+    border: none;
+    font-size: 1.5rem;
+    background: transparent;
+    color:white;
+}
+/* styling navbar links  */
+nav{
+    background: url(img/navb.jpg);
+}
+.navbar-nav a{
+    color:rgb(0, 252, 252) ;
+    position: relative;
+}
+.navbar-nav a:hover{
+    color: rgb(16, 251, 16);
+    cursor:zoom-in;
+}
+.navbar-nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block; 
+    height: 2px;
+    left: 50%;
+    top: 35px;
+    position: absolute;
+    background: aqua;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+.navbar-nav a:hover:after { 
+    width: 100%; 
+    left: 0; 
+  }
+  .navbar .logo32 img{
+    height:40px;
+    margin-right:20px;
+    border-radius: 50%;
+    margin-left:29px;
+    box-shadow: aqua;
+    cursor: not-allowed;
+    box-shadow: 2px 2px 100px 3px rgb(0, 0, 250);
+  }
+  .navbar-brand{
+    color:rgb(247, 72, 247);
+    font-family: "Eater", serif;
+    cursor:ew-resize;
+  }
+
+  /* styling contact btn  */
+.c-btn{
+    border: none;
+    background: #fca61f;
+    color: #fff;
+    font-size: 1.2rem;
+}
+/* styling home section starts */
+.home{
+    background: linear-gradient(33deg, rgba(242,242,255,1) 0%, rgba(235,249,255,1) 100%);
+    padding: 30px 0px 10px 0px;
+}
+.home h2{
+    font-size: 3rem;
+    line-height: 4rem;
+    color:#211e39;
+    font-family: "Oswald", serif;
+}
+.c-orange{
+    color:rgb(245, 63, 245);
+    font-weight: 700;
+    font-size: 4rem;
+    font-family: "Eater", serif;
+}
+.navbar-brand fw-bold fs-2 a{
+    font-family: "eater" serif;
+}
+.img-fluid{
+    border-radius: 15%;
+    box-shadow: 1px 1px 50px 1px aqua;
+    background: linear-gradient(relative);
+    margin-top: 40px;
+}
+.text-muted1{
+    color:rgb(20, 22, 22);
+    font-family: robotto, serif;
+}
+
+/*social media */
+.social-media a{
+    display: inline-flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items:center;
+    width:4rem;
+    height:4rem;
+    border: 2px solid rgb(233, 70, 233);
+    background-color: transparent;
+    border-radius: 50%;
+    font-size: 2rem;
+    color:red;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.5s all ease;
+}
+.social-media .tiktok{
+    color:#000;
+}
+.social-media .instagram{
+    color:white;
+}
+.social-media .tiktok:hover{
+    background-color: #000; 
+    color:#fff;
+    box-shadow: 0 0 1rem red;
+}
+.social-media .instagram:hover{
+    background-color: violet;
+    color:rgb(255, 213, 213);
+    box-shadow:0 0 1rem red;
+}
+.social-media .youtube:hover{
+    background-color:white;
+    color:red;
+    box-shadow:0 0 1rem red;
+}
+ /* .social-media a:hover{
+    background-color:rgb(225, 41, 253);
+    color:rgb(239, 29, 29);
+    box-shadow: 0 0 1rem rgb(15, 248, 15)
+ }
+  */
+ .home{
+    background:url(image/toyota\ supra\ mk4.jpg);
+ }
+ @media (max-width:644px){
+    .home{
+        background: url(image/l1.jpg);
+    }
+    .text-muted1{
+        color:aqua;
+        font-family: robotto, sans-serif;
+    }
+    .c-orange{
+        color: rgb(251, 14, 14);
+    }
+ }
+.home p{
+    width: fit-content;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+.h-btn:hover{
+    background: #6f34fe;
+    color: #fff;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+.link{
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #fca61f;
+    position: relative;
+}
+.link::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    top: 20px;
+    background-color: #6f34fe;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.link:hover{
+    color: #6f34fe;
+}
+.link:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* adding animation to home section image  */
+.home img{
+    animation: floatimg 4s ease-in-out infinite;
+}
+
+@keyframes floatimg {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-24px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+/* expertise section starts */
+
+.heading small{
+    color: #6f34fe;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.heading h3{
+    margin-top: 0.5rem;
+    color: rgb(8, 223, 223);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+.expertise h4{
+    color: #3f396d;
+    font-weight: 700;
+}
+.expertise a{
+    text-decoration: none;
+    color: #fca61f;
+}
+
+.expertise a:hover{
+    color: #6f34fe;
+}
+.expertise .service-card{
+    text-align: center;
+    padding: 15px 15px;
+    border-radius: 0.7rem;
+}
+/* skill section starts */
+.skill{
+    background-color: rgb(234, 234, 249);
+}
+.progress-card{
+    padding: 12% 10% 10% 15%;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 15%;
+    border: 1px solid blue;
+    box-shadow: 1px 1px 1px 2px red;
+    align-items: center;
+    position: relative;
+}
+.progress-card:hover{
+    transform: scale(1.1,1.1);
+    transition-duration: 0.6s;
+}
+.circular-progress{
+    position: relative;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background: conic-gradient(#7d2ae8 3.6deg, #ededed 0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circular-progress::before{
+    content: "";
+    position: absolute;
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.progress-value{
+    position: relative;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.html-progress{
+    color: #fca61f;
+}
+.javascript-progress{
+    color: #6f34fe;
+}
+.php-progress{
+    color: #20c997;
+}
+.reactjs-progress{
+    color: #3f396d;
+}
+.text{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color:rgb(255, 0, 0);
+}
+.heading p{
+    font-size: 1.3rem;
+}
+
+/* portfolio section starts */
+#myBtnContainer{
+    margin-bottom: 45px;
+}
+#myBtnContainer button{
+  border: none;
+  color: black;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;   
+  display: inline-block;
+  margin: 0 25px;
+}
+#myBtnContainer button:hover{
+    color: #56fc1f;
+}
+
+#myBtnContainer button:focus{
+    outline: none;
+}
+.post .content h4{
+    font-size: 1rem;
+    font-weight: 700;
+}
+.post .card{
+    border: none;
+}
+
+/* testimonial section starts */
+.testimonial img:hover{
+    transform: scale(1.2,1.2);
+    transition-duration: 1s;
+}
+.testimonial h4{
+    color: #3f396d;
+}
+.testimonial i{
+    font-size: 2.9rem;
+    color: rgb(251, 35, 35);
+    
+}
+.testimonial .nextprev-btn{
+    border: none;
+    background-color: #fff;
+}
+.prev:hover,.prev-btn:hover{
+    color:#6f34fe;
+    transform: translateX(-10px);
+    transition-duration: 1s;
+}
+.next:hover,.next-btn:hover{
+    color:#6f34fe;
+    transform: translateX(10px);
+    transition-duration: 1s;
+}
+
+
+/* blog section starts */
+.blog{
+    /* background-color: #afafe3; */
+    background:url(img/sky.jpg) ;
+}
+.blog .blogpost .card{
+    border: none;
+    border-radius: 5%;
+}
+.nav-bg{
+    background-color: #fff;
+}
+
+.blog .blogpost small{
+    color: #6f34fe;
+    font-size: 1.1rem;
+}
+.blog .blogpost h4,.blogpost a{
+    color: #3f396d;
+    font-weight: 700;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+.blogpost a:hover{
+    color: rgb(255, 23, 23);
+}
+.blog .blogpost .read-more-btn{
+    text-decoration: none;
+    color: #fca61f;
+    font-size: 1.1rem;
+}
+.blog .blogpost .read-more-btn:hover{
+    color: #6f34fe;
+}
+/* styling modal group  */
+.btn-c{
+    margin-left: 94%;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2rem;
+    margin-top: -3%;
+}
+.btn-c i{
+    color: #fca61f;
+}
+.modal-body .content span{
+    font-size: 1rem;
+}
+.modal-body .content small{
+    font-size: 1rem;
+    color: #6f34fe;
+}
+/* contact section starts */
+.contact{
+    background-color: #f3f3f3;
+}
+.contact-details i{
+    font-size: 1.5rem;
+    color: #fca61f;
+}
+.contact-details p{
+    font-size: 1.2rem;
+    margin-left: 1rem;
+}
+.contact-form .form-control:focus{
+    box-shadow: red;
+    border: 1px solid #000;
+}
+.contact-form .form-control{
+    padding: 10px 10px;
+    width: 80%;
+}
+
+/* footer section starts */
+footer{
+    background-color: #211e39;
+}
+
+footer .link-group a{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #6c757d;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+footer .link-group a:hover{
+    color: #fca61f;
+}
+.social-links button{
+    border: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    background-color: #fff;
+    padding: 14px 15px 10px 15px;
+}
+.social-links .dribble{
+    color: #f33a7e;
+}
+.social-links button:hover{
+    color: #fff;
+    transform: translateY(-20px);
+    transition-duration: 1s;
+}
+.social-links .dribble:hover{
+    background-color: #f33a7e;
+}
+
+.social-links .youtube{
+    color:red
+}
+.social-links .youtube:hover{
+    background:red;
+}
+.social-links .spotify{
+    color: rgb(5, 178, 5);
+}
+.social-links .spotify:hover{
+    background: rgb(115, 255, 0);
+}
+
+/* styling back to top button */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+    font-size: 1.4rem;
+    background-color: #fca61f;
+    color: #fff;
+    animation: pulse 3s infinite;
+}
+
